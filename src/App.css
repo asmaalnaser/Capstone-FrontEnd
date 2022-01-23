@@ -1,0 +1,189 @@
+body{
+  background-color: rgb(0, 0, 0);
+}
+@keyframes scroller {
+    0% {
+        -webkit-transform: translate3d(0, 0, 0);
+        transform: translate3d(0, 0, 0);
+        visibility: visible;
+    }
+    100% {
+        -webkit-transform: translate3d(-100%, 0, 0);
+        transform: translate3d(-100%, 0, 0);
+    }
+}
+@keyframes bloom {
+	0% {
+		filter: grayscale(0);
+	}
+	40% {
+		filter: grayscale(.5);
+	}
+	100% {
+		filter: grayscale(.8);
+	}
+}
+.text-scroller{
+    position: fixed;
+    display: inline-flex;
+    width: 100%;
+    overflow: hidden;
+    height: 50vh;
+    text-transform: uppercase;
+    align-items: center;
+    justify-content: center;
+}
+
+.scroller-left {
+    left: 100%;
+}
+
+.werd {
+    height: 4rem;
+    padding-left: 1rem;
+    line-height: 4rem;
+    white-space: nowrap;
+    -webkit-animation-iteration-count: infinite;
+    animation-iteration-count: infinite;
+    -webkit-animation-timing-function: linear;
+    animation-timing-function: linear;
+    -webkit-animation-name: scroller;
+    animation-name: scroller;
+    -webkit-animation-duration: 40s;
+    animation-duration: 40s;
+    font-size: 6vw;
+    color: white;
+}
+.image-scroller{
+    position: fixed;
+    display: flex;
+    width: 100%;
+    overflow: hidden;
+    height: 80vh;
+    align-items: space-between;
+    justify-content: center;
+    z-index: 444;
+  top: 24%;
+}
+.image-scroller-left {
+    left: 100%;
+}
+.image-scroller .look{
+  white-space: nowrap;
+    -webkit-animation-iteration-count: infinite;
+    animation-iteration-count: infinite;
+    -webkit-animation-timing-function: linear;
+    animation-timing-function: linear;
+    -webkit-animation-name: scroller;
+    animation-name: scroller;
+    -webkit-animation-duration: 40s;
+    animation-duration: 40s;
+
+}
+
+.look img{
+  width: 10vw; 
+  margin-right: 40px;
+  filter: grayscale(0);
+  -webkit-clip-path: inset(0 0 0 0);
+  clip-path: inset(0 0 0 0);
+    -webkit-transition: 1s cubic-bezier(.075,.82,.165,1);
+    -moz-transition: 1s cubic-bezier(.075,.82,.165,1);
+    transition: 1s cubic-bezier(.075,.82,.165,1);
+
+}
+
+.look img:hover{
+   animation: bloom ease-in-out .75s forwards;
+   clip-path: inset(10px);
+}
+
+#msform {
+  width: 400px;
+  margin: 50px auto;
+  text-align: center;
+  position: relative;
+  margin-top: -10px;
+}
+#msform1 {
+  width: 400px;
+  margin: 50px auto;
+  text-align: center;
+  position: relative;
+  margin-top: -10px;
+}
+#msform fieldset {
+  background: white;
+  border: 0 none;
+  border-radius: 3px;
+  box-shadow: 0 0 15px 1px rgba(0, 0, 0, 0.4);
+  padding: 20px 30px;
+  box-sizing: border-box;
+  width: 80%;
+  margin: 0 10%;
+  position: relative;
+}
+
+body {
+  font-family: montserrat, arial, verdana;
+}
+#msform fieldset:not(:first-of-type) {
+  display: none;
+}
+/*inputs*/
+#msform input, #msform textarea {
+  padding: 15px;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+  margin-bottom: 10px;
+  width: 100%;
+  box-sizing: border-box;
+  font-family: montserrat;
+  color: #2C3E50;
+  font-size: 13px;
+}
+/*buttons*/
+#msform .action-button {
+  width: 100px;
+  background:  #666;
+  font-weight: bold;
+  color: white;
+  border: 0 none;
+  border-radius: 1px;
+  cursor: pointer;
+  padding: 10px 5px;
+  margin: 10px 5px;
+}
+#msform .action-button:hover, #msform .action-button:focus {
+  box-shadow: 0 0 0 2px white, 0 0 0 3px #27AE60;
+}
+.select {
+  position: relative;
+  height: 47.5px;
+  background: rgb(199, 65, 65);
+  box-shadow: 0 3px 0 rgba(0,0,0,.05);
+  font-size: 14px;
+  border: none;
+  box-shadow: none;
+  border-radius: 0;
+  background: transparent;
+  height: 30px;
+  width: 100%;
+  cursor: pointer;
+  outline: none;
+  padding-right: 35px;
+  padding-left: 120px;
+  border: 1px solid #343635;
+}
+form {
+  display:block;
+  width:400px;
+  height:auto;
+  margin:50px auto;
+  padding:9px;
+  border-radius:15px;
+  background-color:rgba(192, 188, 188, 0.918);
+  font-size:16px;
+  font-family:'Arial';
+  color:rgb(7, 7, 7)
+}
