@@ -10,7 +10,7 @@ export default class Acssories extends Component {
         };
     }
     componentDidMount() {
-        axios.get("api/designer")
+        axios.get("https://asmahamadfashion.herokuapp.com/api/designer")
             .then(result => {
                 const i = result.data;
                 this.setState({ i });

@@ -8,7 +8,7 @@ export default class Dresses extends Component {
         };
     }
     componentDidMount() {
-        axios.get("api/designer")
+        axios.get("https://asmahamadfashion.herokuapp.com/api/designer")
             .then(result => {
                 const x = result.data;
                 this.setState({ x });

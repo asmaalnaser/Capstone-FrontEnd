@@ -55,7 +55,7 @@ export default function Designer() {
         console.log("insid function");
         axios({
             method: "post",
-            url: "api/designer/add",
+            url: "https://asmahamadfashion.herokuapp.com/api/designer/add",
             data: Designer
         });
         // ?else{alert("just for ADMIN")}

@@ -13,7 +13,7 @@ export default class Review extends Component {
         };
     }
     componentDidMount() {
-        axios.get("reviews")
+        axios.get("https://asmahamadfashion.herokuapp.com/reviews")
             .then(result => {
                 const ReviewEmphasis = result.data;
                 this.setState({ ReviewEmphasis });
@@ -22,7 +22,7 @@ export default class Review extends Component {
     deleteListCar(id){
         // let log=localStorage.getItem("Check")
         // if (log=="authenticatedADMIN"){
-          axios.delete(`api/delete/${id}`)
+          axios.delete(`https://asmahamadfashion.herokuapp.com/api/delete/${id}`)
           .then(res =>{
               const MyArr = this.state.MyArr.filter
               (item => item.id !== id );

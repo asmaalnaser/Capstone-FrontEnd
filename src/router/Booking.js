@@ -43,7 +43,7 @@ console.log(sessionStorage.getItem("designer"))
     
     axios({
         method: 'post',
-        url: 'booking/add',
+        url: 'https://asmahamadfashion.herokuapp.com/booking/add',
         data: Booking,
     });
     alert("Register done")

@@ -31,7 +31,7 @@ export default function ListReview() {
         console.log(Reviews)
         axios({
             method: 'post',
-            url: 'api/add',
+            url: 'https://asmahamadfashion.herokuapp.com/api/add',
             data: Reviews,
 
         });

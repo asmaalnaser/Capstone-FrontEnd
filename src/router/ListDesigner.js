@@ -22,7 +22,7 @@ export default class ListDesigner extends Component {
 
 
       componentDidMount() {
-        axios.get("api/designer")
+        axios.get("https://asmahamadfashion.herokuapp.com/api/designer")
             .then(result => {
                 const MyArr = result.data;
                 this.setState({ MyArr });
@@ -31,7 +31,7 @@ export default class ListDesigner extends Component {
     deleteListCar(id){
       // let log=localStorage.getItem("Check")
       // if (log=="authenticatedADMIN"){
-        axios.delete(`api/designer/delete/${id}`)
+        axios.delete(`https://asmahamadfashion.herokuapp.com/api/designer/delete/${id}`)
         .then(res =>{
             const MyArr = this.state.MyArr.filter
             (item => item.id !== id );

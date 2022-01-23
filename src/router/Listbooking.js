@@ -18,7 +18,7 @@ export default class Listbooking extends Component {
     componentDidMount() {
         let myDesignerDisplay = sessionStorage.getItem("designer")
         console.log(myDesignerDisplay)
-        axios.get(`api/designer/designers/${myDesignerDisplay}`)
+        axios.get(`https://asmahamadfashion.herokuapp.com/api/designer/designers/${myDesignerDisplay}`)
             .then(result => {
                 this.setState({ MyArr: result.data });
             });
@@ -28,14 +28,14 @@ export default class Listbooking extends Component {
       let  myData={designer: this.state.MyArr }
     axios({
         method:"post",
-        url:"api/designer/add",
+        url:"https://asmahamadfashion.herokuapp.com/api/designer/add",
         data:myData
     })
      }
 
     
     deleteListCar(id){
-        axios.delete(`api/designer/delete/${id}`)
+        axios.delete(`https://asmahamadfashion.herokuapp.com/api/designer/delete/${id}`)
         .then(res =>{
             const myData = this.state.myData.filter
             (item => item.id !== id );

@@ -107,7 +107,7 @@ export default function Login() {
   function SignUp() {
     axios({
       method: "post",
-      url: "api/user/add",
+      url: "https://asmahamadfashion.herokuapp.com/api/user/add",
       data:
         myData
     }).then(response => { setCheck(response.data) })
@@ -116,7 +116,7 @@ export default function Login() {
   
   function Login(event) {
     event.preventDefault();
-    axios.get("api/user/login", { params: { userName: userName, password: password } })
+    axios.get("https://asmahamadfashion.herokuapp.com/api/user/login", { params: { userName: userName, password: password } })
       .then(response => {
         if (response.data == "authenticatedUSER"){
           localStorage.setItem("Check","authenticatedUSER")
